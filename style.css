@@ -7,6 +7,15 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+p {
+    margin: 2px;
+    padding: 0;
 }
 
 nav {
@@ -14,6 +23,9 @@ nav {
     padding: 12px;
     background-color: rgb(0, 110, 255);
     color: rgb(255, 255, 255);
+
+    grid-column: 1/2;
+    grid-row: span 6;
 }
 
 ul {
@@ -40,8 +52,107 @@ nav li {
     cursor: pointer;
 }
 
+
+
+
+
+
+
+header {
+    grid-column: 2/ span 4;
+    grid-row: 1;
+}
+
+header .top-layer {
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: clamp(40px, 10%, 80px) 1fr repeat(2, clamp(40px, 10%, 80px));
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.searchbar {
+    width: 70%;
+    height: 80%;
+    background-color: rgb(235, 235, 235);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar:hover {
+    border: 1px solid cornflowerblue;
+    box-shadow: 0 0 3px lightblue;
+}
+
+header input {
+    width: 90%;
+    height: 90%;
+    background-color: rgb(235, 235, 235);
+    border: transparent;
+}
+
+header input:focus {
+    outline: none;
+}
+
 img.profile {
     width: 40px;
     height: 40px;
     border-radius: 50px;
+}
+
+.username {
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+header .bottom-layer {
+    box-shadow: 0 5px 3px rgb(200, 200, 200);
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: max(70px, 5vw) 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 10px;
+}
+
+header .bottom-layer > .profile {
+    width: max(70px, 5vw);
+    height: max(70px, 5vw);
+}
+
+.big-txt {
+    font-size: 1.5rem;
+}
+
+button {
+    width: clamp(100px, 10vw, 200px);
+    height: 70%;
+    background-color: rgb(0, 110, 255);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
