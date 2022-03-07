@@ -54,6 +54,7 @@ nav li {
     align-items: center;
     gap: 10px;
     font-weight: 900;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -197,7 +198,7 @@ main {
 
 .project {
     width: max(250px, 90%);
-    height: 140px;
+    height: max(140px, 30vh);
     margin: 10px 0;
     padding: 30px 12px 30px 22px;
     border-radius: 8px;
@@ -237,7 +238,7 @@ main {
     margin: 10px 0;
     padding: 50px 40px;
     width: max(250px, 80%);
-    height: 350px;
+    height: auto;
     border-radius: 8px;
     box-shadow: 3px 3px 3px rgb(200, 200, 200);
     background-color: white;
@@ -245,9 +246,40 @@ main {
 
 .announcement-title {
     font-weight: 900;
+    cursor: pointer;
 }
 
 hr {
     margin: 20px 0;
     color: rgb(200, 200, 200);
+}
+
+
+
+
+
+
+.trending-list {
+    margin: 10px 0;
+    padding: 50px 40px;
+    width: max(250px, 80%);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px rgb(200, 200, 200);
+    background-color: white;
+}
+
+.trending-item {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.trending-item > img {
+    width: max(40px, 4vw);
+    height: max(40px, 4vw);
+}
+
+.trending-item > div {
+    font-size: 1rem;
 }
